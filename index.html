@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Dayi!</title>
+    <style>
+        /* ESTILOS CSS PARA HACER LA PÁGINA HERMOSA */
+        :root {
+            --color-principal: #FF69B4; /* Rosa Fuerte */
+            --color-secundario: #fce4ec; /* Rosa Muy Claro */
+            --color-texto: #333;
+            --fuente-titulo: 'Georgia', serif;
+            --fuente-cuerpo: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- TÍTULO PRINCIPAL --- */
+        header {
+            padding: 20px;
+            background-color: var(--color-principal);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            margin: -20px -20px 20px -20px;
+        }
+        header h1 {
+            font-family: var(--fuente-titulo);
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* --- SECCIÓN INTRO Y FOTO 1 --- */
+        .intro {
+            margin-bottom: 30px;
+        }
+        .intro img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 50%; /* Foto en círculo */
+            border: 5px solid var(--color-principal);
+            object-fit: cover;
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        /* --- FRASES Y TEXTOS --- */
+        .frases h2 {
+            color: var(--color-principal);
+            border-bottom: 2px dashed var(--color-principal);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .lista-frases {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .lista-frases li {
+            background-color: #ffe0f0;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            /* Se ha eliminado el font-style: italic para que las negritas de las frases se vean mejor */
+            font-size: 1.1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* APLICAR ESTILO CURSIVA SOLO AL TEXTO DE LA FRASE */
+        .lista-frases li strong {
+            font-style: italic; 
+            font-weight: normal; /* Para que la negrita no sea tan pesada */
+        }
+
+        /* --- SECCIÓN DE FOTOS 2 y 3 --- */
+        .galeria {
+            margin-top: 40px;
+        }
+        .galeria h2 {
+            color: var(--color-principal);
+            border-bottom: 2px dashed var(--color-principal);
+            padding-bottom: 10px;
+        }
+        .fotos-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .foto-item {
+            flex: 1 1 45%; /* Dos fotos por fila en escritorio, una en móvil */
+            text-align: center;
+        }
+        .foto-item img {
+            width: 100%;
+            height: 300px; /* Tamaño fijo para consistencia */
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            border: 3px solid #ccc;
+        }
+        .foto-item img:hover {
+            transform: scale(1.05);
+            border-color: var(--color-principal);
+        }
+        .foto-item p {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* --- SECCIÓN REGALO --- */
+        .regalo {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #fff0f5; /* Un rosa muy suave */
+            border-radius: 10px;
+            border: 2px solid var(--color-principal);
+        }
+        .regalo h2 {
+            color: var(--color-principal);
+            font-size: 1.8em;
+        }
+        .regalo p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .btn-regalo {
+            background-color: var(--color-principal);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .btn-regalo:hover {
+            background-color: #c71585; /* Un rosa más oscuro al pasar el mouse */
+        }
+
+        /* --- CIERRE --- */
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            font-size: 1.1em;
+            font-style: italic;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Media Queries para hacerlo responsivo */
+        @media (max-width: 600px) {
+            .contenedor {
+                margin: 20px;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .intro img {
+                width: 100%;
+                height: 300px;
+                border-radius: 10px; /* Cuadrada en móvil */
+            }
+            .fotos-grid {
+                flex-direction: column;
+            }
+            .foto-item {
+                flex: 1 1 100%;
+            }
+            .foto-item img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <header>
+            <h1>💖 Un Regalo Solo Para Ti 💖</h1>
+        </header>
+
+        <section class="intro">
+            <h2>¡Feliz Cumpleaños, Dayi!</h2>
+
+            <img src="1.jpg" alt="Foto principal de la cumpleañera">
+
+            <p style="font-size: 1.2em; margin-top: 25px; line-height: 1.5;">
+                Hoy celebramos a la persona maravillosa que eres. Te deseo un día lleno de alegría
+                y espero que este pequeño detalle digital te sorprenda y te haga sonreír.
+            </p>
+        </section>
+
+        <section class="frases">
+            <h2>Las 4 Frases que Hablan de Ti</h2>
+            
+            <ul class="lista-frases">
+                <li><strong>"Tu energía ilumina a todos los que te rodean. ¡Feliz cumpleaños, te deseo lo mejor!"</strong></li>
+                <li><strong>"Un año más de experiencias y crecimiento. Que sigas cosechando éxitos. ¡Felicidades!"</strong></li>
+                <li><strong>"Hoy celebramos no solo tu cumpleaños, sino la mujer fuerte e inspiradora que eres."</strong></li>
+                <li><strong>"Que este nuevo año esté lleno de sorpresas dulces y momentos tan geniales como tú. ¡Feliz día!"</strong></li>
+            </ul>
+        </section>
+
+        <section class="galeria">
+            <div class="fotos-grid">
+                
+                <div class="foto-item">
+                    <img src="2.jpg" alt="Foto de un momento especial">
+                </div>
+
+                <div class="foto-item">
+                    <img src="3.jpg" alt="Foto espontánea y divertida">
+                </div>
+
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>Te deseo un año lleno de éxitos y mucha felicidad.</p>
+            <p>Con mis mejores deseos, Jhon QP</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
